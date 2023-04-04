@@ -8,8 +8,8 @@ function Header() {
         <div className="flex items-center bg-[#2b1d2b] flex-grow py-2 px-5">
 
             <div className="m-1 flex items-center flex-grow sm:flex-grow-0">
-                <Image src="https://i.ibb.co/hY1PwXm/Nextbuy-1-removebg-preview.png" width={150} height={40} 
-                    className="object-contain cursor-pointer" />
+                <Image src="https://i.ibb.co/hY1PwXm/Nextbuy-1-removebg-preview.png" width={130} height={20} 
+                    className="object-contain cursor-pointer mr-3" />
             </div>
 
             <div className="hidden sm:flex items-center h-10 bg-blue-300 hover:bg-blue-400 rounded-md flex-grow cursor-pointer">
@@ -22,7 +22,7 @@ function Header() {
                     <p className="font-bold md:text-sm">Hello Vaibhav</p>
                     <p className="md:text-sm">Account & Lists</p>
                 </div>
-                <div className="link">
+                <div className="link hidden sm:inline">
                     <p className="md:text-sm">Returns</p>
                     <p className="md:text-sm">& Orders</p>
                 </div>

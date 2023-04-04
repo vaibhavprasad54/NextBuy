@@ -20,9 +20,9 @@ const Product = ({ id, title, price, description, category, image }) => {
         {/* Category, Image and Title */}
         <p className="absolute top-2 right-2 text-xs italic text-yellow-600">{category}</p>
         <div className="flex items-center justify-center">
-            <Image src={image} width={150} height={150}  className="object-contain w-36 h-36" />
+            <Image src={image} width={140} height={140}  className="object-contain w-32 h-32" />
         </div>
-        <h1 className="my-3 line-clamp-1">{ title }</h1>
+        <h1 className="my-3 line-clamp-1 text-sm sm:text-base">{ title }</h1>
 
         {/* Rating section */}
         <div className="flex">
@@ -32,8 +32,8 @@ const Product = ({ id, title, price, description, category, image }) => {
         </div>
         
         {/* Description and Price */}
-        <p className="text-sm my-2 line-clamp-2">{ description }</p>
-        <div className="mb-1 font-semibold text-lg">
+        <p className="text-xs my-2 line-clamp-2 sm:text-sm text-gray-700">{ description }</p>
+        <div className="mb-1 font-semibold text-base sm:text-lg">
             <Currency quantity={price} currency="INR" />
         </div>
 
