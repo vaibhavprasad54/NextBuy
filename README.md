@@ -1,5 +1,5 @@
 
-## NextBuy!
+## NextBuy! ![image](https://em-content.zobj.net/source/skype/289/handbag_1f45c.png)
 ### A one stop solution for products ranging from electronics to Home & Care.
 
 
