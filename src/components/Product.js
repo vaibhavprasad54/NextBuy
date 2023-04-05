@@ -2,9 +2,13 @@ import Image from "next/image"
 import { useState } from "react"
 import { StarIcon, ShoppingBagIcon } from "@heroicons/react/24/solid";
 import Currency from "react-currency-formatter";
+import { useDispatch } from "react-redux";
+import { addToBasket } from "../slices/basketSlice";
 
 
 const Product = ({ id, title, price, description, category, image }) => {
+    
+    const dispatch = useDispatch();
 
     const MAX_RATING = 5;
     const MIN_RATING = 1;
@@ -15,8 +19,23 @@ const Product = ({ id, title, price, description, category, image }) => {
 
     const [sameDayDelivery] = useState( Math.random() < 0.5 );
 
+    const addItemToCart = () => {
+        const product = {
+            id,
+            title,
+            price,
+            rating,
+            description,
+            category,
+            image,
+            sameDayDelivery
+        };
+        // Sending the product as an action to the REDUX STORE.
+        dispatch(addToBasket(product));
+    }
+
   return (
-    <div className="relative flex flex-col m-5 bg-white z-30 p-10 cursor-pointer">
+    <div className="relative flex flex-col m-5 bg-white z-30 p-10 cursor-pointer rounded-[5px]">
         {/* Category, Image and Title */}
         <p className="absolute top-2 right-2 text-xs italic text-yellow-600">{category}</p>
         <div className="flex items-center justify-center">
@@ -29,6 +48,7 @@ const Product = ({ id, title, price, description, category, image }) => {
             {Array(rating).fill().map((_, i) => (
                 <StarIcon className="h-5 text-green-600" />
             ))}
+            <StarIcon className="h-5 text-green-600" />
         </div>
         
         {/* Description and Price */}
@@ -43,12 +63,12 @@ const Product = ({ id, title, price, description, category, image }) => {
                 <img className="w-8 h-7" src="https://cdn-icons-png.flaticon.com/512/3900/3900787.png" alt="" />
                 <p className="text-xs text-gray-500">FREE- Same Day Delivery</p>
             </div>
-        )}
+         )}
 
         {/* Add Button */}
-        <button className="mt-auto button flex items-center justify-center space-x-2"> 
+        <button onClick={addItemToCart} className="mt-auto button flex items-center justify-center space-x-2"> 
             <p> Add to Cart </p>
-        <   ShoppingBagIcon className="h-5 text-white" /> 
+            <ShoppingBagIcon className="h-5 text-white" /> 
         </button>
         
     </div>

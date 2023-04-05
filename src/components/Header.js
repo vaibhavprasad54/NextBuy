@@ -1,14 +1,23 @@
 import Image from "next/image"
 import { MagnifyingGlassIcon, Bars3Icon, ShoppingCartIcon } from '@heroicons/react/24/outline'
+import { signIn, signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
+import { selectItems } from "../slices/basketSlice";
 
 function Header() {
+
+    const { data: session } = useSession()                                  //Accessing the session state using "useSession" hook.
+    const router = useRouter();                                             // This gives us the router object
+    const items = useSelector(selectItems);                                 // Fetching items in the basket from Global store using selector
+
   return (
     <header>
         {/* Top Nav */}
         <div className="flex items-center bg-[#2b1d2b] flex-grow py-2 px-5">
 
             <div className="m-1 flex items-center flex-grow sm:flex-grow-0">
-                <Image src="https://i.ibb.co/hY1PwXm/Nextbuy-1-removebg-preview.png" width={130} height={20} 
+                <Image onClick={() => router.push("/")} src="https://i.ibb.co/hY1PwXm/Nextbuy-1-removebg-preview.png" width={130} height={20} 
                     className="object-contain cursor-pointer mr-3" />
             </div>
 
@@ -18,16 +27,20 @@ function Header() {
             </div>
 
             <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
-                <div className="link">
-                    <p className="font-bold md:text-sm">Hello Vaibhav</p>
+                <div onClick={!session ? signIn : signOut} className="cursor-pointer link">                 {/* If there is nothing in session, sign in, otherwise sign out */}
+                    <p className="font-bold md:text-sm">
+                        {session ? `Hello, ${session.user.name}` : "Sign In"}              {/* Displaying user name from database */} 
+                    </p>
                     <p className="md:text-sm">Account & Lists</p>
                 </div>
                 <div className="link hidden sm:inline">
                     <p className="md:text-sm">Returns</p>
                     <p className="md:text-sm">& Orders</p>
                 </div>
-                <div className="relative flex items-center link">
-                    <span className="absolute -top-1 right-0 md:right-6 h-4 w-4 bg-blue-300 text-black rounded-full text-center font-bold"> 4 </span>
+                <div onClick={() => router.push("/checkout")} className="relative flex items-center link">
+                    <span className="absolute -top-1 right-0 md:right-6 h-4 w-4 bg-blue-300 text-black rounded-full text-center font-bold">
+                        {items.length} 
+                    </span>
                     <ShoppingCartIcon className="h-8" />
                     <p className="hidden md:inline font-bold md:text-sm">Cart</p>
                 </div>

@@ -10,4 +10,7 @@
     .button {
         @apply p-2 text-xs text-white md:text-sm bg-gradient-to-b from-[#7097ed] to-[#3158ae] rounded-[4px] focus:outline-none focus:ring-2 hover:bg-gradient-to-t from-[#7097ed] to-[#3158ae]
     }
+    .checkoutButton {
+        @apply p-2 text-xs text-white md:text-sm bg-gradient-to-b from-[#65bd33] to-[#277505] rounded-[4px] focus:outline-none focus:ring-2 hover:bg-gradient-to-t from-[#58a82a] to-[#216404]
+    }
 }
