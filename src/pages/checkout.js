@@ -5,6 +5,10 @@ import { selectItems, selectTotal } from "../slices/basketSlice"
 import CheckoutProduct from "../components/CheckoutProduct";
 import Currency from "react-currency-formatter"
 import { useSession } from "next-auth/react";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
+
+const stripePromise = loadStripe(process.env.stripe_public_key);
 
 
 function Checkout() {
@@ -12,6 +16,26 @@ function Checkout() {
   const items = useSelector(selectItems);                   // Pulling items from the Redux store
   const { data: session } = useSession()
   const total = useSelector(selectTotal); 
+
+  const createCheckoutSession = async() => {
+    const stripe = await stripePromise;
+
+    // Call the backend to create a checkout session...
+    const checkoutSession = await axios.post('/api/create-checkout-session',                // Making a POST request using Axios
+    {
+      items: items,                                                                        // Sending items and user email id as "body" of the API Req.
+      email: session.user.email
+    });
+
+    //Redirect the use/customer to Stripe checkout
+    const result = await stripe.redirectToCheckout({
+      sessionId: checkoutSession.data.id,                           // Taking session id from data
+    });
+
+    if(result.error) {
+      alert(result.error.message);
+    }
+  };
 
   return (
     <div className="bg-gray-100">
@@ -54,6 +78,8 @@ function Checkout() {
                     </h2>
 
                     <button 
+                      role="link"
+                      onClick={createCheckoutSession}
                       disabled={!session}
                       className={`mt-2 ${!session ? 'bg-gray-500 text-sm px-2 py-2 rounded-[4px] border-gray-200 text-gray-300 cursor-not-allowed' : "checkoutButton text-base"}`}>
                       {!session ? "Sign in to Checkout" : "Proceed to Checkout"}
