@@ -7,7 +7,7 @@ function Footer() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col items-center justify-center text-center bg-[#0d1b31] flex-grow py-6 px-5 sm:px-10">
+    <div className="flex flex-col items-center justify-center text-center bg-[#0d1b31] flex-grow py-5 px-5 sm:px-10">
         <p className="text-white text-sm sm:text-base">Made with NextJS and Tailwind ❤️</p>
         <p className="text-gray-300 text-xs sm:text-sm">Copyright © 2023 NextBuy </p>
         <div className="social-media flex items-center space-x-2 mt-2">

@@ -18,7 +18,7 @@ function Header() {
 
             <div className="m-1 flex items-center flex-grow">
                 <Image onClick={() => router.push("/")} src="https://i.ibb.co/hY1PwXm/Nextbuy-1-removebg-preview.png" width={130} height={20} 
-                    className="object-contain cursor-pointer mr-3 w-24 sm:w-32" />
+                    className="object-contain cursor-pointer mr-3 w-32" />
             </div>
 
             {/* <div className="hidden sm:flex items-center h-10 bg-blue-300 hover:bg-blue-400 rounded-md flex-grow cursor-pointer">
@@ -26,10 +26,10 @@ function Header() {
                 <MagnifyingGlassIcon className="h-12 p-4" />
             </div> */}
 
-            <div className="text-white flex items-center text-xs space-x-3 sm:space-x-10 mx-6 whitespace-nowrap">
+            <div className="text-white flex items-center text-xs space-x-3 sm:space-x-10 ml-6 mr-2 whitespace-nowrap">
                 <div onClick={!session ? signIn : signOut} className="cursor-pointer link">                 {/* If there is nothing in session, sign in, otherwise sign out */}
                     <p className="md:text-sm">
-                        {session ? `Hello,` : "Welcome to NextBuy"}              {/* Displaying user name from database */} 
+                        {session ? `Hello,` : "Welcome,"}              {/* Displaying user name from database */} 
                     </p>
                     <p className="font-bold md:text-base">
                         {session ? `${session.user.name}` : "Sign in"}

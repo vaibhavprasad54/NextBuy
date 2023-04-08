@@ -9,16 +9,16 @@ const Banner = () => {
 
         <Carousel autoPlay infiniteLoop showStatus={false} showIndicators={false} showThumbs={false} interval={2000}>
             <div>
-                <img loading="lazy" src="https://i.ibb.co/DR96wj0/3.png" className="sm:h-96 sm:object-cover" alt="" />
+                <img loading="lazy" src="https://i.ibb.co/DR96wj0/3.png" className="sm:h-72 sm:object-cover" alt="" />
             </div>
             <div>
-            <img loading="lazy" src="https://i.ibb.co/47KhDMV/1.png" className="sm:h-96 sm:object-cover" alt="" />
+            <img loading="lazy" src="https://i.ibb.co/47KhDMV/1.png" className="sm:h-72 sm:object-cover" alt="" />
             </div>
             <div>
-            <img loading="lazy" src="https://i.ibb.co/vk4g994/2.png" className="sm:h-96 sm:object-cover" alt="" />
+            <img loading="lazy" src="https://i.ibb.co/vk4g994/2.png" className="sm:h-72 sm:object-cover" alt="" />
             </div>
             <div>
-            <img loading="lazy" src="https://i.ibb.co/J582PVq/Swiss-Books.png" className="sm:h-96 sm:object-cover" alt="" />
+            <img loading="lazy" src="https://i.ibb.co/J582PVq/Swiss-Books.png" className="sm:h-72 sm:object-cover" alt="" />
             </div>
         </Carousel>
     </div>

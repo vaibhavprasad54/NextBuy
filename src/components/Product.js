@@ -39,7 +39,7 @@ const Product = ({ id, title, price, description, category, image }) => {
     }
 
   return (
-    <div className="relative flex flex-col m-5 bg-white z-30 p-10 cursor-pointer rounded-[5px]">
+    <div className="relative flex flex-col m-5 bg-white z-30 px-7 py-9 sm:p-9 cursor-pointer rounded-[5px]">
         {/* Category, Image and Title */}
         <p className="absolute top-2 right-2 text-xs italic text-white bg-yellow-600 px-2 py-1 rounded-[3px]">{category}</p>
         <div className="flex items-center justify-center">

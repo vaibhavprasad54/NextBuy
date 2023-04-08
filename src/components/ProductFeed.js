@@ -2,7 +2,7 @@ import Product from "./Product"
 
 const ProductFeed = ({ products }) => {
   return (
-    <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-44 mx-auto">
+    <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-20 mx-auto sm:px-5">
         {products.slice(0,4).map(({ id, title, price, description, category, image }) => (      // Took out inner values of "product" variable using Object Destructuring.
             <Product 
                 key={id}                                               // "key" is the most crucial part in mapping in order for react to identify each element and render the list efficiently
