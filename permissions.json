@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nextbuy-57635",
+  "private_key_id": "1a1fa1febc2dd202f4db4b8c3165e98ce0d17213",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpboMedCiEs+wR\ncFxYdRWbW6q9HYp5s/DpXyG0JKq2HiYa8EJAEk07KnCSG6ZjUSUyJE2+kn++P8Ic\nC0pK3gmgQFM55Bqyu/w0YjS1Bdzgrrlrk3VvctbmUutVsBNEWxuzIs6YuyEWooKb\nkTkHvxBcG+oPyO1J2KyYuajSNI/GJDbTsipkuj1NhgH/9Yzwxny9YrphXEvutrKQ\nJrvpxQHqRPdov+YnFCVrMhVnsxkHSf//u/9mbG7dZi/sOQYFVyIjBySFQl4gy+eS\nOJ/P1TyG0lLN5ExZ5g2s5xDMRevnORYeIh9AvDeF4Par88+IJfhlhLWMAU9iJWZt\nZTO9ERw9AgMBAAECggEASunrHZ78f1hSS4+jtRTn3c5VGtMh9BfEsFr4uv7vYCDK\ndmS+1jeBYGSua1vAYO9zA82bdmSuCL+GIwI28g1ksi9e3RznVRnbNIorhdK2y71V\njKQha4qaTDJjjXqRukqSX81HDa7HvYtTNleqoKsxH5jUD/CmQl2ESu7kHzVQUKnf\nvTedq/9x6fWhTqKqS++1AZgL0Jj3NkuynAUKn1iG8kEKSUYVOs1Mxx0JnIPSFOnE\nA5YXhYwwgBBRa4Yy+qJ635YPHyn8AfGIiV3jM19B3CKiMHe8JztXA8JIovIZgoT7\nhVbnNDi+Z/YbmCQHrwiZYlttWSgFq4ZStr4y+NpeHQKBgQDhIzcPF6LeVhgSJGpO\nktfqMd83IIIm3FOz40sgIzKRP/8y/F5NDSJ2u/qzTwSjrHbauxa6f0orAfEWwiij\nSeWNXXdDOnnv5SgTZTnpU/Tx4Du19U9EbcopPnL5ly5IdiX1wP40cZzziTBpeH6l\nzVvKvfrb1CAfH8F7QKlPILBRqwKBgQDAqGcmeLKjxEo+KkKowbEubb/gOQ/cXqFJ\n0yQnCnAkQbTW/+7wMZt139WxVDkKmZQIKfSRR/aqekdLpYWgBy/61A9o9EPLmz4+\nkld4Dm3dKQAPPEW55T14bXzlLxQMLd2Y5nGc17o8iITglGcpZvbyx/aNzCbZztn/\n7TbI4y8xtwKBgHkl/ADRFUFTTsykb9gsSKergpQlmCPVN+17B/gZOKLUrzz+dLg9\nsyf1a6iFgteYfLSjLE3bJUwTVWqLvFZx82aovv6cPvWKeJBHTmxyU0K9CSSXBrqp\n4blj83a/lZZEjZS674/E+1JJppV605vg794fcRhOA6L78Z+jYfhEfNzVAoGAC//x\nPNIzvkORpEGZmU1HLe8kDmE/fahfP2vpSo054ug8zU9voIJWfocMllj6nJBoSgHi\n+9GRqZioLCwJIKiR8nuW4iCkwF/RBrCyxgWQDkBpgolshmGi7IdVSikehIuuy8E+\nvlgpf2+5ZwuXSVricsjFsJtQqCxcI7awvN55qA0CgYEA3kTjE/2JeWwqO1Bs+I/D\nthc7RuzojQpk3nd3jKq9ypP8LDmnwSr6c2bicjSwwVsEFnzJutGA1szhwziqIULD\noyQPk7Se/qbFwQAUn6Mduv4OpJsSzGYmEcwMe+pId+xBEIq+96Vt+KekplXO5WzV\nM+nLWUsegXhHIhHr7BhE+VA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-yz49z@nextbuy-57635.iam.gserviceaccount.com",
+  "client_id": "102674512264982041907",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-yz49z%40nextbuy-57635.iam.gserviceaccount.com"
+}

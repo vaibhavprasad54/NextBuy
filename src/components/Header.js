@@ -14,26 +14,28 @@ function Header() {
   return (
     <header>
         {/* Top Nav */}
-        <div className="flex items-center bg-[#2b1d2b] flex-grow py-2 px-5">
+        <div className="flex items-center bg-[#0d1b31] flex-grow py-2 px-5 sm:px-10">
 
-            <div className="m-1 flex items-center flex-grow sm:flex-grow-0">
+            <div className="m-1 flex items-center flex-grow">
                 <Image onClick={() => router.push("/")} src="https://i.ibb.co/hY1PwXm/Nextbuy-1-removebg-preview.png" width={130} height={20} 
-                    className="object-contain cursor-pointer mr-3" />
+                    className="object-contain cursor-pointer mr-3 w-24 sm:w-32" />
             </div>
 
-            <div className="hidden sm:flex items-center h-10 bg-blue-300 hover:bg-blue-400 rounded-md flex-grow cursor-pointer">
+            {/* <div className="hidden sm:flex items-center h-10 bg-blue-300 hover:bg-blue-400 rounded-md flex-grow cursor-pointer">
                 <input type="text" className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md px-4" />
                 <MagnifyingGlassIcon className="h-12 p-4" />
-            </div>
+            </div> */}
 
-            <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
+            <div className="text-white flex items-center text-xs space-x-3 sm:space-x-10 mx-6 whitespace-nowrap">
                 <div onClick={!session ? signIn : signOut} className="cursor-pointer link">                 {/* If there is nothing in session, sign in, otherwise sign out */}
-                    <p className="font-bold md:text-sm">
-                        {session ? `Hello, ${session.user.name}` : "Sign In"}              {/* Displaying user name from database */} 
+                    <p className="md:text-sm">
+                        {session ? `Hello,` : "Welcome to NextBuy"}              {/* Displaying user name from database */} 
                     </p>
-                    <p className="md:text-sm">Account & Lists</p>
+                    <p className="font-bold md:text-base">
+                        {session ? `${session.user.name}` : "Sign in"}
+                    </p>
                 </div>
-                <div className="link hidden sm:inline">
+                <div onClick={() => router.push('/orders')} className="link">
                     <p className="md:text-sm">Returns</p>
                     <p className="md:text-sm">& Orders</p>
                 </div>
@@ -41,14 +43,14 @@ function Header() {
                     <span className="absolute -top-1 right-0 md:right-6 h-4 w-4 bg-blue-300 text-black rounded-full text-center font-bold">
                         {items.length} 
                     </span>
-                    <ShoppingCartIcon className="h-8" />
+                    <ShoppingCartIcon className="h-6 sm:h-8" />
                     <p className="hidden md:inline font-bold md:text-sm">Cart</p>
                 </div>
             </div>
         </div>
 
         {/* Bottom Nav */}
-        <div className="flex items-center p-2 pl-6 space-x-3 bg-[#ddbcdc] text-sm">
+        {/* <div className="flex items-center p-2 pl-6 space-x-3 bg-[#ddbcdc] text-sm">
             <p className="link flex items-center">
             <Bars3Icon className="h-6 mr-1" />
                 All
@@ -62,7 +64,7 @@ function Header() {
             <p className="link hidden lg:inline-flex">Amazon Business</p>
             
     
-        </div>
+        </div> */}
     </header>
   )
 }

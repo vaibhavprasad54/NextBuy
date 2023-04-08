@@ -17,7 +17,7 @@ const ProductFeed = ({ products }) => {
 
         <img className="md:col-span-full cursor-pointer px-4 mx-auto sm:h-64 sm:w-full sm:object-cover" src="https://i.ibb.co/XbV0K1f/Untitled-design-4.png" alt="" />
 
-    <div className="md:col-span-2">
+    {/* <div className="md:col-span-2">
     {products.slice(4,5).map(({ id, title, price, description, category, image }) => (      // Took out inner values of "product" variable using Object Destructuring.
             <Product 
                 key={id}                                               // "key" is the most crucial part in mapping in order for react to identify each element and render the list efficiently
@@ -29,7 +29,7 @@ const ProductFeed = ({ products }) => {
                 image={image}
             />                                                    
         ))}
-    </div>
+    </div> */}
 
     {products.slice(5, products.length).map(({ id, title, price, description, category, image }) => (      // Took out inner values of "product" variable using Object Destructuring.
             <Product 

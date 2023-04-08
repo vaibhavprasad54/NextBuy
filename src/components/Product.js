@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { StarIcon, ShoppingBagIcon } from "@heroicons/react/24/solid";
 import Currency from "react-currency-formatter";
 import { useDispatch } from "react-redux";
@@ -13,11 +13,15 @@ const Product = ({ id, title, price, description, category, image }) => {
     const MAX_RATING = 5;
     const MIN_RATING = 1;
 
-    const [rating] = useState(
-        Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING               // Generating a random number between max and min ratings
-    );
+    const [rating, setRating] = useState(1);
+    const [sameDayDelivery, setSameDayDelivery] = useState(true);
 
-    const [sameDayDelivery] = useState( Math.random() < 0.5 );
+  useEffect(() => {
+    setRating(
+      Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
+    );
+    setSameDayDelivery(Math.random() < 0.5);
+  }, []);
 
     const addItemToCart = () => {
         const product = {
@@ -37,7 +41,7 @@ const Product = ({ id, title, price, description, category, image }) => {
   return (
     <div className="relative flex flex-col m-5 bg-white z-30 p-10 cursor-pointer rounded-[5px]">
         {/* Category, Image and Title */}
-        <p className="absolute top-2 right-2 text-xs italic text-yellow-600">{category}</p>
+        <p className="absolute top-2 right-2 text-xs italic text-white bg-yellow-600 px-2 py-1 rounded-[3px]">{category}</p>
         <div className="flex items-center justify-center">
             <Image src={image} width={140} height={140}  className="object-contain w-32 h-32" />
         </div>

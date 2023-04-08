@@ -28,10 +28,10 @@ export default async(req, res) => {
         mode: 'payment',
         success_url: `${process.env.HOST}/success`,
         cancel_url: `${process.env.HOST}/checkout`,
-        // metadata: { 
-        //     email,
-        //     images: JSON.stringify(items.map(item => item.image))
-        // }
+        metadata: { 
+            email,
+            images: JSON.stringify(items.map(item => item.image))
+        }
     });
 
 
